@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <title>捐款页面</title>
+
+    <link rel="shortcut icon" href="gt_favicon.png" tppabs="http://xiyounet.org/assets/images/gt_favicon.png">
+
+    <!--<link rel="stylesheet" media="screen" href="assets/css/Opensans.css">-->
+    <link rel="stylesheet" href="bootstrap.min.css" tppabs="http://xiyounet.org/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome.min.css" tppabs="http://xiyounet.org/assets/css/font-awesome.min.css">
+
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="bootstrap-theme.css" tppabs="http://xiyounet.org/assets/css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="main.css" tppabs="http://xiyounet.org/assets/css/main.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="html5shiv.js" tppabs="http://xiyounet.org/assets/js/html5shiv.js"></script>
+	<script src="respond.min.js" tppabs="http://xiyounet.org/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top headroom">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="index.html" tppabs="http://xiyounet.org/index.html"><img src="logo.png" tppabs="http://xiyounet.org/assets/images/logo.png" alt="Association of Network and Technology"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="index.html" tppabs="http://xiyounet.org/index.html">主页</a></li>
+                                     <!-- <li><a href="2017wangye/file_submit/index.html">网页设计大赛</a></li>-->
+                    <li><a href="javascript:if(confirm(%27http://ctf.xiyounet.org/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://ctf.xiyounet.org/%27" tppabs="http://ctf.xiyounet.org/">CTF</a></li>
+                    <li><a href="about.html" tppabs="http://xiyounet.org/about.html">关于</a></li>
+                    <li><a href="contact.html" tppabs="http://xiyounet.org/contact.html">联系我们</a></li>
+                    <li><a href="javascript:if(confirm(%27http://slide.xiyounet.org/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://slide.xiyounet.org/%27" tppabs="http://slide.xiyounet.org/"><b>Slide</b></a></li>
+                <!--    <li><a class="btn" href="join.html">2017纳新 最新消息</a>< -->
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- /.navbar -->
+
+    <header id="head" class="secondary"></header>
+
+    <!-- container -->
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li><a href="index.html" tppabs="http://xiyounet.org/index.html">主页</a></li>
+            <li class="active">捐赠者信息录入</li>
+        </ol>
+
+
+        <div class="row">
+            <div id="mymodal" class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
+
+                <div class="modal-dialog modal-md">
+
+                    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article main content -->
+            <article class="col-sm-8 maincontent">
+                <header class="page-header">
+                    <h1 class="page-title">捐赠者信息录入</h1>
+                </header>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="form-group">
+                        <label for="DonorName">姓名</label>
+                        <input type="text" class="form-control" id="DonorName" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="DonorGraduation">毕业年份</label>
+                        <input type="text" class="form-control" id="DonorGraduate" placeholder="Enter GraduationYear">
+                    </div>
+                    <div class="form-group">
+                        <label for="DonorEmail1">邮箱</label>
+                        <input type="text" class="form-control" id="DonorEmail" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="DonorTel">联系电话</label>
+                        <input type="text" class="form-control" id="DonorTel" placeholder="Enter Tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DonorKeepSecert">是否公开捐款记录</label>
+                        <br/>
+                        <label class="radio-inline">
+                            <input type="radio" name="DonorKeepSecert" id="KeepSecert" value="0" checked > 公开
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="DonorKeepSecert" id="NoKeepSecert" value="1"> 不公开
+                        </label>
+
+                    </div>
+
+                    <button id="postBtn" class="btn btn-success">提交</button>
+
+                </div>
+
+            </article>
+            <!-- /Article -->
+
+            <!-- Sidebar -->
+            <aside class="col-sm-4 sidebar sidebar-right">
+
+                <div class="widget">
+                    <img src="mac.jpg" tppabs="http://xiyounet.org/assets/images/mac.jpg" alt="" class="pull-center img-rounded img-slide">
+                    <div class="forDonors">
+                        <p class="tc">从 0 到 1<br/>风雨兼程<br/>感谢一路有你</p>
+                        <p class="tc">我们承诺每一份捐款<br/>都会用来支持协会发展</p>
+                        <p class="tc">我们承诺每一份心意<br/>都会用在协会需要的地方</p>
+                        <a href="javascript:if(confirm(%27http://doc.xiyounet.org/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://doc.xiyounet.org/%27" tppabs="http://doc.xiyounet.org/" class="slide-a">点击了解基金使用规范 </a>
+                    </div>
+                </div>
+
+
+
+            </aside>
+            <!-- /Sidebar -->
+
+        </div>
+    </div>
+    <!-- /container -->
+
+
+
+   <footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">联系我们</h3>
+						<div class="widget-body">
+							<address>陕西省西安市长安区西安邮电大学 东区 FZ130	</address>
+								<p><b>邮箱:</b><a href="mailto:admin@xiyouant.org">admin@xiyouant.org</a><br></p>	
+						</div>
+					</div>
+
+					<div class="col-md-2 widget">
+						<h3 class="widget-title">Follow Us</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a class="social-btn bspopover" data-toggle="popover" data-placement="top" data-trigger="hover" data-html="true"data-content="<img src=assets/images/wechat.jpg style='width: 140px; height: 140px;'>" data-original-title="" title="">
+      							<i class="fa fa-weixin fa-2"></i>
+    							</a>
+								<a href="javascript:if(confirm(%27https://github.com/xiyouant  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/xiyouant%27" tppabs="https://github.com/xiyouant" target="_blank"><i class="fa fa-github fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-2 widget">
+						<h3 class="widget-title">友情赞助</h3>
+						<div class="widget-body">
+								<p><a href="contribution.html" tppabs="http://xiyounet.org/contribution.html" target="_blank">我要赞助</a></p>
+								<p><a href="donorList.html" tppabs="http://xiyounet.org/donorList.html" target="_blank">查看捐赠者列表</a></p>	
+						</div>
+					</div>
+
+					<div class="col-md-5 widget">
+						<h3 class="widget-title">内容许可</h3>
+						<div class="widget-body">
+							<p>本站由 <a href="javascript:if(confirm(%27https://www.digitalocean.com/?refcode=3c8422b30f9d  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.digitalocean.com/?refcode=3c8422b30f9d%27" tppabs="https://www.digitalocean.com/?refcode=3c8422b30f9d">DigitalOcean</a> 提供服务器支持<a href="javascript:if(confirm(%27http://www.qiniu.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.qiniu.com/%27" tppabs="http://www.qiniu.com/"> 七牛 </a>提供 CDN 存储服务</p>
+							<p>除特别说明外，用户内容均采用
+							<a rel="license" target="_blank" href="javascript:if(confirm(%27http://creativecommons.org/licenses/by-sa/3.0/cn/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://creativecommons.org/licenses/by-sa/3.0/cn/%27" tppabs="http://creativecommons.org/licenses/by-sa/3.0/cn/">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a>进行许可</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 col-sm-6 widget">
+						<div class="widget-body">
+<!-- 							<p class="simplenav">
+								<a href="#">主页</a> | 
+								<a href="http://blog.xiyounet.org">专栏</a> |
+								<a href="http://lib.xiyounet.org">网协图书馆</a> |
+								<a href="contact.html">联系我们</a> 
+							</p> -->
+							<p class="text-center">Copyright &copy; 2010-2015  西安邮电大学计算机院网络科技协会.</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 widget">
+						<div class="widget-body">
+							<p class="text-center">陕ICP备15013578号 当前呈现版本 15.11.4</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>
+
+
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="jquery.min.js" tppabs="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="bootstrap.min.js" tppabs="http://xiyounet.org/assets/js/bootstrap.min.js"></script>
+    <script src="headroom.min.js" tppabs="http://xiyounet.org/assets/js/headroom.min.js"></script>
+    <script src="jQuery.headroom.min.js" tppabs="http://xiyounet.org/assets/js/jQuery.headroom.min.js"></script>
+    <script src="template.js" tppabs="http://xiyounet.org/assets/js/template.js"></script>
+    <script src="xiyounet.js" tppabs="http://xiyounet.org/assets/js/xiyounet.js"></script>
+    <!--  popover initialization -->
+    <script>$(function () {$('[data-toggle="popover"]').popover()})</script>
+</body>
+
+</html>
